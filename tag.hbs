@@ -17,7 +17,7 @@
 <main>
     <article class="tag-archive">
         <header class="tag-archive-header">
-            <p>You are browsing</p>
+            <p>Posts in</p>
             <h1>{{tag.name}}</h1>
         </header>
 
@@ -34,7 +34,13 @@
                 <footer>
                     <p class="meta">
                         <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-                        <span class="tags">{{tags prefix="on "}}</span>
+                        {{#if tags}}
+                            <span class="tags">
+                                {{#foreach tags }}
+                                    <a href="{{url}}" class="tag tag-{{slug}}">{{name}}</a>
+                                {{/foreach}}
+                            </span>
+                        {{/if}}
                     </p>
                 </footer>
             </article>
