@@ -22,7 +22,15 @@
             <h1><a href="{{url}}">{{{title}}}</a></h1>
         </header>
 
-        <p>{{excerpt}}… <a href="{{url}}" class="more">Read more</a></p>
+        <section class="post-content">
+            <div class="post-image">
+                <a href="{{url}}">
+                    <img src="{{image}}" alt="Post image"/>
+                </a>
+            </div>
+            <p>{{excerpt}}… <a href="{{url}}" class="more">Read more</a></p>
+        </section>
+
         <footer>
             <p class="meta">
                 <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
