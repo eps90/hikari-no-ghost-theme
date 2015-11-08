@@ -23,11 +23,13 @@
         </header>
 
         <section class="post-content">
-            <div class="post-image">
-                <a href="{{url}}">
-                    <img src="{{image}}" alt="Post image"/>
-                </a>
-            </div>
+            {{#if image}}
+                <div class="post-image">
+                    <a href="{{url}}">
+                        <img src="{{image}}" alt="Post image"/>
+                    </a>
+                </div>
+            {{/if}}
             <p>{{excerpt}}… <a href="{{url}}" class="more">Read more</a></p>
         </section>
 

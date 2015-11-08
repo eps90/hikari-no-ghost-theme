@@ -28,10 +28,12 @@
         </header>
 
         <section class="post-content">
-            <div class="post-image">
-                <img src="{{image}}" alt="Post image"/>
-            </div>
-
+            {{#if image}}
+                <div class="post-image">
+                    <img src="{{image}}" alt="Post image"/>
+                </div>
+            {{/if}}
+            
             {{! Everything inside the #post tags pulls data from the post }}
             {{content}}
         </section>
