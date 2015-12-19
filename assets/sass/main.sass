@@ -25,10 +25,10 @@ $page-width: 75rem
   &:after
     margin: 0 -70% 0 2%
 
-@mixin tag($color)
-  background-color: $color
+@mixin tag($backgroundColor)
+  background-color: $backgroundColor
   &:hover
-    background-color: darken($color, 10)
+    background-color: darken($backgroundColor, 10)
 
 // extensions
 
@@ -331,6 +331,8 @@ span.tags
       +tag(#eacf36)
     &.tag-tutorial
       +tag(#338732)
+    &.tag-angularjs
+      +tag(#dd1b16)
 
 p.meta
   span.tags
